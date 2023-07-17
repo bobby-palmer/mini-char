@@ -9,7 +9,6 @@ struct Buf{
   unsigned char x6: 5;
   unsigned char x7: 5;
   unsigned char x8: 5;
-  public:
   Buf(char* letters){
     x1 = letters[0] - 'a';
     x2 = letters[1] - 'a';
@@ -20,14 +19,24 @@ struct Buf{
     x7 = letters[6] - 'a';
     x8 = letters[7] - 'a';
   }
+  char* decode(){
+    char* str = new char[9];
+    str[0] = x1 + 'a';
+    str[1] = x2 + 'a';
+    str[2] = x3 + 'a';
+    str[3] = x4 + 'a';
+    str[4] = x5 + 'a';
+    str[5] = x6 + 'a';
+    str[6] = x7 + 'a';
+    str[7] = x8 + 'a';
+    return str;
+  }
 };
 
 int main(){
   char letters[9] = "abcdefgh";
   Buf b = Buf(letters);
-  char* ptr = (char*)&b;
-  for(int i = 0; i < 5; i++){
-    cout << ptr[i];
-  }
+  cout << b.decode();
+  return 0;
 }
 
