@@ -2,7 +2,7 @@ char* encode(char* str);
 char* decode(char* str);
 char encode_char(char letter);
 
-class Buffer{
+struct Buffer{
   unsigned char a: 5;
   unsigned char b: 5;
   unsigned char c: 5;

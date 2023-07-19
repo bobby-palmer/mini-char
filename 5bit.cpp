@@ -5,6 +5,13 @@ using namespace std;
 
 Buffer::Buffer(char* str){
   a = encode_char(str[0]);
+  b = encode_char(str[1]);
+  c = encode_char(str[2]);
+  d = encode_char(str[3]);
+  e = encode_char(str[4]);
+  f = encode_char(str[5]);
+  g = encode_char(str[6]);
+  h = encode_char(str[7]);
 }
 char* encode(char *str){
   uint len = strlen(str);
