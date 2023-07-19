@@ -13,11 +13,6 @@ Buffer::Buffer(char* str){
   g = encode_char(str[6]);
   h = encode_char(str[7]);
 }
-char* encode(char *str){
-  uint len = strlen(str);
-  // for compilation
-  return new char[0];
-}
 
 char encode_char(char letter){
   // currently only work for lowercase alphabetical
