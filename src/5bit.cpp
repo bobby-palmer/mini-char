@@ -5,7 +5,7 @@ using namespace std;
 
 Buffer::Buffer(char* str){
   char* sized_str = new char[9];
-  for(uint i = 0; i < 8 && i < strlen(str); i++){
+  for(uint i = 0; i < 8; i++){
     if(i < strlen(str)){
       sized_str[i] = str[i];
     } else {

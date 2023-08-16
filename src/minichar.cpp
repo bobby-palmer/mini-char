@@ -1,4 +1,7 @@
+#include <cmath>
 #include <cstring>
+#include "../src/5bit.h"
+
 char* encode(char* str) {
   int len = std::strlen(str);
   int adjLen = len + (8 - len % 8);
@@ -10,4 +13,6 @@ char* encode(char* str) {
   for (int i = len; i < adjLen; i++) {
     sized[i] = '%';
   }
+  sized[adjLen] = '\0';
+  int newLen = std::ceil(adjLen / 8) * 5;
 }
