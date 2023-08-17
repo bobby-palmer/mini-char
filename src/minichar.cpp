@@ -33,6 +33,9 @@ char* decode(char* str) {
 }
 
 char guardRange(char *str, int i) {
-  //for compilation
-  return 'a';
+  if (i < strlen(str)) {
+    // TODO
+    return 0x01;
+  }
+  return 0x1e;
 }
