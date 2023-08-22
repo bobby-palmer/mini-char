@@ -13,3 +13,8 @@ char* decode(char* str);
 * otherwise returns a placeholder to fix the 5 bit buffer
 */
 char guardRange(char* str, int i);
+
+/*
+* Returns the characters encoding value
+*/
+char range(char c);
