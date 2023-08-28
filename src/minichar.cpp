@@ -34,8 +34,15 @@ char* decode(char* str) {
 
 char guardRange(char *str, int i) {
   if (i < strlen(str)) {
-    // TODO
-    return 0x01;
+    return range(str[i]);
   }
-  return 0x1e;
+  return 0x1b;
+}
+
+char range(char c) {
+  if (c >= 'a' && c <= 'z') {
+    return c - 'a' + 1;
+  } else {
+    return 0x1b;
+  }
 }
