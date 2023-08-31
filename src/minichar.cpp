@@ -28,8 +28,10 @@ char* encode(char* str) {
 }
 
 char* decode(char* str) {
-  // for compilation
-  return 0x00;
+  size_t old_length = strlen(str);
+  char* res = new char[old_length / 5 * 8];
+  // todo implmenet
+  return res;
 }
 
 char guardRange(char *str, int i) {
